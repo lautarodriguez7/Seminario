@@ -45,8 +45,8 @@ return [
     |
     */
 
-    'logo' => '<b>CAJA</b> - Rosario',
-    'logo_img' => 'vendor/adminlte/dist/img/caja.png',
+    'logo' => '<b>CITIUS Computación</b>',
+    'logo_img' => 'vendor/adminlte/dist/img/citius.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
