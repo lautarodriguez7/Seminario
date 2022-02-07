@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Bienvenido al panel principal de LA CAJA DE JUBILACIONES DE ABOGADOS DE SANTA FE</p>
+    <p>Bienvenido al panel principal de CITIUS COMPUTACION</p>
 @stop
 
 @section('css')

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Caja de Seguridad Social de Abogados y Procuradores de la Provincia de Santa Fe
+            {{ __('Bienvenido a CITIUS COMPUTACION
             ') }}
         </h2>
     </x-slot>
