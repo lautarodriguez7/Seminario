@@ -16,7 +16,7 @@
 @section('classes_body'){{ ($auth_type ?? 'login') . '-page' }}@stop
 
 @section('body')
-    <div class="{{ $auth_type ?? 'login' }}-box">
+    <div class="{{ $auth_type ?? 'login' }}-box todo">
 
         {{-- Logo --}}
         <div class="{{ $auth_type ?? 'login' }}-logo">
@@ -46,12 +46,12 @@
             {{-- Card Footer --}}
             @hasSection('auth_footer')
                 <div class="card-footer {{ config('adminlte.classes_auth_footer', '') }}">
-                    @yield('auth_footer')
+                    <!-- @yield('auth_footer') -->
+                    <a href="/register">Registrar una nueva cuenta</a>
                 </div>
             @endif
 
         </div>
-
     </div>
 @stop
 

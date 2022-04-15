@@ -29,12 +29,15 @@ class RoleSeeder extends Seeder
                             'description' => 'Editar articulo'])->assignRole($role1);
         Permission::create(['name' => 'articulo.destroy',
                             'description' => 'Eliminar articulo '])->assignRole($role1);
-
+        Permission::create(['name' => 'cliente.destroy',
+        'description' => 'Eliminar cliente '])->assignRole($role1);
         Permission::create(['name' => 'admin.users.index',
                             'description' => 'Ver usuarios'])->syncRoles([$role1, $role3]);
         Permission::create(['name' => 'admin.users.edit',
                             'description' => 'Editar rol usuario '])->assignRole($role1);
         Permission::create(['name' => 'admin.users.update',
                             'description' => 'Actualizar rol de usuario'])->assignRole($role1);
+        Permission::create(['name' => 'clientes',
+        'description' => 'Ver clientes'])->syncRoles([$role3]);
     }
 }

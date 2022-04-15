@@ -68,7 +68,7 @@ class User extends Authenticatable
     }
 
     public function adminlte_desc() {
-        return "Cómputos";
+        return "Bienvenido!";
     }
 
     public function adminlte_profile_url() {

@@ -103,11 +103,11 @@ return [
     */
 
     'classes_auth_card' => '',
-    'classes_auth_header' => 'bg-gradient-info',
+    'classes_auth_header' => 'bg-gradient-primary',
     'classes_auth_body' => '',
     'classes_auth_footer' => 'text-center',
-    'classes_auth_icon' => 'fa-lg text-info',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_icon' => 'fa-lg text-primary',
+    'classes_auth_btn' => 'btn-flat btn-danger',
 
     /*
     |--------------------------------------------------------------------------
@@ -229,11 +229,11 @@ return [
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
-            'topnav_right' => false,
+            'topnav_right' => true,
         ],
         [
             'type'         => 'fullscreen-widget',
-            'topnav_right' => false,
+            'topnav_right' => true,
         ],
 
         // Sidebar items:
@@ -249,17 +249,17 @@ return [
         ['header' => 'Datos'],
 
         [
-            'text'        => 'Articulos',
-            'url'         => 'articulos',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 'CRUD',
+            'text'        => 'Clientes',
+            'url'         => 'clientes',
+            'icon'        => 'fas fa-clipboard-check fa-fw',
+            // 'label'       => 'crud',
             'label_color' => 'danger',
         ],
         [
             'text'        => ' Usuarios',
             'url'         => 'user',
-            'icon'        => 'fas fa-chalkboard-teacher',
-            'label'       => 'PRACTICA',
+            'icon'        => 'fas fa-chalkboard-teacher fa-fw',
+            'label'       => 'SOLO ADMIN',
             'label_color' => 'success',
             'can' => 'admin.users.index',
         ],
@@ -268,117 +268,61 @@ return [
             'text'        => 'Lista de roles',
             'url'         => 'roles',
             'icon'        => 'fas fa-user-cog fa-fw',
-            'label'       => 'PRACTICA',
+            // 'label'       => '',
             'label_color' => 'success',
             'can' => 'admin.users.index',
         ],
 
-        ['header' => 'Configuracion de cuenta'],
-        [
-            'text' => 'Perfil',
-            'url'  => 'user/profile',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'Cambiar contraseña',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'Administracion',
-            'icon'    => 'fas fa-fw fa-share',
-            'can' => 'articulo.create',
+        // ['header' => 'Configuracion de cuenta'],
+        // [
+        //     'text' => 'Perfil',
+        //     'url'  => 'user/profile',
+        //     'icon' => 'fas fa-fw fa-user',
+        // ],
+        // [
+        //     'text' => 'Cambiar contraseña',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-lock',
+        // ],
+        // [
+        //     'text'    => 'Administracion',
+        //     'icon'    => 'fas fa-fw fa-share',
+        //     'can' => 'articulo.create',
 
-            'submenu' => [
-                [
-                    'text' => 'Archivos',
-                    'url'  => '#',
-                ],
-                // [
-                //     'text'    => 'level_one',
-                //     'url'     => '#',
-                //     'submenu' => [
-                //         [
-                //             'text' => 'level_two',
-                //             'url'  => '#',
-                //         ],
-                //         [
-                //             'text'    => 'level_two',
-                //             'url'     => '#',
-                //             'submenu' => [
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-                //             ],
-                //         ],
-                //     ],
-                // ],
-                // [
-                //     'text' => 'level_one',
-                //     'url'  => '#',
-                // ],
-            ],
-        ],
-        [
-            'text'    => 'Blogg',
-            'icon'    => 'fas fa-fw fa-share',
-            'can' => 'articulo.index',
-            'submenu' => [
-                [
-                    'text' => 'Blogs',
-                    'url'  => '#',
-                ],
-                // [
-                //     'text'    => 'level_one',
-                //     'url'     => '#',
-                //     'submenu' => [
-                //         [
-                //             'text' => 'level_two',
-                //             'url'  => '#',
-                //         ],
-                //         [
-                //             'text'    => 'level_two',
-                //             'url'     => '#',
-                //             'submenu' => [
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-                //                 [
-                //                     'text' => 'level_three',
-                //                     'url'  => '#',
-                //                 ],
-                //             ],
-                //         ],
-                //     ],
-                // ],
-                // [
-                //     'text' => 'level_one',
-                //     'url'  => '#',
-                // ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Archivos',
+        //             'url'  => '#',
+        //         ],
+        //     ],
+        // ],
+        // [
+        //     'text'    => 'Blogg',
+        //     'icon'    => 'fas fa-fw fa-share',
+        //     'can' => 'articulo.index',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Blogs',
+        //             'url'  => '#',
+        //         ],
+        //     ],
+        // ],
+        // ['header' => 'labels'],
+        // [
+        //     'text'       => 'important',
+        //     'icon_color' => 'red',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'warning',
+        //     'icon_color' => 'yellow',
+        //     'url'        => '#',
+        // ],
+        // [
+        //     'text'       => 'information',
+        //     'icon_color' => 'cyan',
+        //     'url'        => '#',
+        // ],
     ],
 
     /*
